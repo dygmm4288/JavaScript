@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>문서 객체 모델</title>
+    <script>
+        /* 웹 페이지 실행 순서에 따라 태그 로딩 후 실행 */
+        window.onload = () => {
+            /* 문서 객체 선택 방법 */
+            // 한개씩 선택 
+            let h1 = document.getElementById('h1');
+            h1.style.color = 'red';
+            let h2 = document.querySelector('h2'); // 2개 이상시  가장 먼저 나오는 것 선택
+            h2.style.color = 'red';
+            // 두개씩 선택
+            let h2Class = document.getElementsByClassName('h2');
+            let divName = document.getElementsByName('box');
+            let h2QueryAll = document.querySelectorAll('h2');
+            for (var i = 0; i < 5; i++) {
+                h2Class[i].style.backgroundColor = 'blue';
+                divName[i].style.width = '100px';
+                divName[i].style.height = '100px';
+                divName[i].style.float = 'left';
+                divName[i].style.backgroundColor = 'black';
+                h2QueryAll[i].style.color = 'red';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="h1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto excepturi consequuntur?
+        Incidunt est,
+        similique recusandae enim labore, quod, officia illo repudiandae molestiae aliquid ipsa totam inventore? Odio,
+        vel dolore.
+    </h1>
+    <h2 class="h2">1</h2>
+    <h2 class="h2">2</h2>
+    <h2 class="h2">3</h2>
+    <h2 class="h2">4</h2>
+    <h2 class="h2">5</h2>
+    <div name="box"></div>
+    <div name="box"></div>
+    <div name="box"></div>
+    <div name="box"></div>
+    <div name="box"></div>
+</body>
+
+</html>

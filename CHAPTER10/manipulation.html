@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>문서 조작</title>
+    <script>
+        window.onload = () => {
+            /* 글자 조작 */
+            var output = '';
+            for (var i = 0; i < 5; i++) {
+                output += `<h1>Header - ${i + 1}</h1>`;
+            }
+            document.getElementById('textContent').textContent = output;
+            document.getElementById('innerHTML').innerHTML = output;
+            /* 스타일 조작 */
+            output = '';
+            for (var i = 0; i < 256; i++) {
+                output += '<div></div>';
+            }
+            document.body.innerHTML += output;
+            var divs = document.querySelectorAll('div');
+            for (var i = 0; i < 256; i++) {
+                divs[i].style.height = '2px';
+                divs[i].style.background = `rgb(${i},${i},${i})`;
+            }
+            /* 속성 조작 */
+            var image = document.getElementById('image');
+            // 속성 변경
+            image.width = 300;
+            image.height = 200;
+            image.src = 'http://placehold.it/300x200';
+            /* body 태그 속성 조작 */
+            document.body.setAttribute('data-custom', 'value');
+            let value = document.body.getAttribute('data-custom');
+            document.body.innerHTML += value;
+            /* 문서 객체를 사용한 시간 표시 */
+            var clock = document.getElementById('clock');
+            setInterval(() => {
+                clock.textContent = new Date().toString();
+            }, 1000)
+        };
+    </script>
+</head>
+
+<body>
+    <span id="textContent"></span>
+    <span id="innerHTML"></span>
+    <img src="" alt="" id="image" />
+    <h1 id="clock"></h1>
+</body>
+
+</html>

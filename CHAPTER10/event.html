@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이벤트</title>
+    <script>
+        /* script 태그에 인라인 이벤트 모델 사용 */
+        function buttonClick() {
+            alert('click');
+        };
+        /* 익명 함수로도 가능  */
+        var btnClick = () => {
+            alert('btnClick');
+        };
+        window.onload = () => {
+            var box = document.getElementById('box');
+            box.onclick = () => {
+                box.textContent += '*';
+            };
+            box.onclick = function () {
+                console.log(this);
+            }
+
+            /* 이벤트 정보 */
+            var form = document.querySelector('form');
+            form.onclick = function (eventObject) {
+                var a = 11;
+                console.log(a);
+                eventObject.preventDefault();/* 기본 이벤트 없애기 */
+            }
+            var aTag = document.querySelector('a');
+            aTag.onclick = () => {
+                return false;/* 기본 이벤트 없애기 */
+            }
+
+        };
+    </script>
+</head>
+
+<body>
+    <!-- 태그 내부 자바스크립트 코드 부여 -->
+    <!-- Inline Event Model -->
+    <button onclick="alert('click')">태그 내부 인라인</button>
+    <button onclick="btnClick()">script 태그 인라인</button>
+    <div id="box">상자</div>
+    <form action="">
+        <input type="text" />
+        <button type="submit">확인</button>
+    </form>
+    <a href="https://www.naver.com">네이버</a>
+
+</body>
+
+</html>
