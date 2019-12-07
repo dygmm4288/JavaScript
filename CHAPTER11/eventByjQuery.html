@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>이벤트</title>
+    <script>
+        $(document).ready(() => {
+            //클릭 이벤트
+            $('h1').click(() => {
+                log('click');
+            });
+            //복합 이벤트 연결 메서드
+            let h1 = $('h1').hover(
+                () => {
+                    h1.css({
+                        backgroundColor: 'red',
+                        color: 'white',
+                    });
+                }
+                , () => {
+                    h1.css({
+                        backgroundColor: 'blue',
+                        color: 'red'
+                    });
+                }
+            );
+            //이벤트 연결
+            $('#box').css({
+                width: 100,
+                height: 100,
+                background: 'orange',
+                float: 'left',
+            }).on('click', () => {
+                $('#box').css('background', 'red');
+            }).on('mouseenter', () => {
+                $('#box').css('background', 'blue');
+            }).on('mouseleave', () => {
+                $('#box').css('background', 'orange');
+            });
+            let box2 = $('#box2').css({
+                width: 100,
+                height: 100,
+                background: 'orange',
+                float: 'left'
+            }).on({
+                click: () => { box2.css('background', 'red') },
+                mouseenter: () => { box2.css('background', 'blue') },
+                mouseleave: () => { box2.css('background', 'orange') }
+            });
+            // 기본 이벤트 제거
+            $('a').click((e) => {
+                e.preventDefault();
+            })
+        });
+        function log(value) {
+            console.log(value);
+            return value;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Click</h1>
+    <div>
+        <div id="box"></div>
+        <div id="box2"></div>
+    </div>
+    <a href="www.naver.com">네이버로 이동</a>
+</body>
+
+</html>

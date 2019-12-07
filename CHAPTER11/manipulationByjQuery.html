@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>문서 객체 조작 By jQuery</title>
+    <script>
+        $(document).ready(() => {
+            /* attr */
+            //속성 값 추출
+            var src = $('script').attr('src');
+            log(src);
+            //속성 지정
+            //속성 값 입력
+            $('img').attr('src', 'http://placehold.it/300x200');
+            $('.box').css('float', 'left');
+            $('.box').css('margin', 10);
+            $('.box').css('width', 100);
+            $('.box').css('height', 100);
+            $('.box').css('background-color', 'red');
+            //객체 값 입력
+            $('img').attr({
+                src: 'http://placehold.it/300x200',
+                width: 300,
+                height: 200
+            });
+            $('.box').css({
+                float: 'left',
+                width: 100,
+                height: 100,
+                margin: 10,
+                backgroundColor: 'blue'
+            });
+            //함수 값 입력
+            $('img').attr('src', (index) => {
+                let size = (index + 1) * 100;
+                return `http://placehold.it/${size}x200`;
+            });
+            var output = '';
+            for (var i = 0; i < 256; i++) {
+                output += '<div class = "gradient"></div>';
+            }
+            document.body.innerHTML += output;
+            $('.gradient').css({
+                height: 2,
+                backgroundColor: (i) => {
+                    return `rgb(${i},${i},${i})`;
+                }
+            })
+            //함수 + 객체
+            $('img').attr({
+                src: (index) => { `http://placehold.it/${(index + 1) * 100}x200` },
+                width: (index) => { return (index + 1) * 100 },
+                height: 200,
+            });
+            //글자 조작
+            //text(매개변수) & html(매개변수) -> 수정 입력
+            $('.box:nth-child(1)').text('<a href = "">이동</a>');
+            $('.box:nth-child(2)').html('<a href = "https://naver.com">이동</a>');
+            //text() & html() -> 문자 추출
+            log('text is' + $('.box').text()); //전체 문서 객체의 글자 추출
+            log('html is' + $('.box').html()); //첫 번째 문서 객체의 글자 추출
+        });
+        function log(value) {
+            console.log(value);
+            return value;
+        };
+    </script>
+</head>
+
+<body>
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

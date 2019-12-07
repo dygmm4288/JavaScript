@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>연습문제</title>
+    <script>
+        $(document).ready(() => {
+            $('#button').hover(
+                () => {
+                    $('#button').css({
+                        opacity: 0.5
+                    });
+                }
+                , () => {
+                    $('#button').css({
+                        opacity: 1
+                    })
+                }
+            );
+
+            var colors = ['red', 'green', 'blue'];
+            var currentColor = 0;
+            $('#clickButton').css({
+                backgroundColor: colors[currentColor]
+            }).click(() => {
+                currentColor += 1;
+                if (currentColor > 3) currentColor = 0;
+                $('#clickButton').css({
+                    backgroundColor: colors[currentColor]
+                });
+            });
+            $('body').click(() => {
+                $('.drawer-menu').slideToggle('slow');
+            });
+        });/* end of $(document).ready */
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .drawer {
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            color: white;
+            background-color: red;
+        }
+
+        .drawer h1 {
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .drawer-menu {
+            display: none;
+        }
+
+        .content {
+            padding: 10px;
+            padding-top: 60px;
+        }
+
+        #button {
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            background-color: teal;
+            border-radius: 20px;
+        }
+
+        #clickButton {
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="button">버튼</div>
+    <div id="clickButton">클릭</div>
+    <div class="drawer">
+        <h1>Logo</h1>
+        <div class="drawer-menu">
+            <p>Esse pariatur</p>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem natus totam quos a minus commodi dolorum.
+            Odio voluptate beatae ipsum deleniti veritatis minus odit accusamus earum enim, iste unde esse.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem natus totam quos a minus commodi dolorum.
+            Odio voluptate beatae ipsum deleniti veritatis minus odit accusamus earum enim, iste unde esse.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem natus totam quos a minus commodi dolorum.
+            Odio voluptate beatae ipsum deleniti veritatis minus odit accusamus earum enim, iste unde esse.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem natus totam quos a minus commodi dolorum.
+            Odio voluptate beatae ipsum deleniti veritatis minus odit accusamus earum enim, iste unde esse.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem natus totam quos a minus commodi dolorum.
+            Odio voluptate beatae ipsum deleniti veritatis minus odit accusamus earum enim, iste unde esse.</p>
+    </div>
+
+</body>
+
+</html>
