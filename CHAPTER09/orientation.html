@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Orientation</title>
+    <style>
+        /* 데스크톱 */
+        body {
+            background-color: blue;
+        }
+
+        /* 스마트폰 */
+        @media screen and (max-width: 767px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+
+        /* 스마트폰 세로 */
+        @media screen and (max-width: 767px) and (orientation: portrait) {
+            h1 {
+                color: purple;
+            }
+        }
+
+        /* 스마트폰 가로 */
+        @media screen and (max-width: 767px) and (orientation: landscape) {
+            h1 {
+                color: lightpink;
+            }
+        }
+
+        /* 태블릿PC */
+        @media screen and (min-width: 768px) and (max-width: 959px) {
+            body {
+                background-color: purple;
+            }
+        }
+
+        /* 태블릿PC 세로 */
+        @media screen and (min-width: 768px) and (max-width: 959px) and (orientation: portrait) {
+            body {
+                background-color: purple;
+            }
+
+            /* 태블릿PC 가로 */
+        }
+
+        @media screen and (min-width: 768px) and (orientation: landscape) {
+            body {
+                background-color: purple;
+            }
+
+            h1 {
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum omnis impedit cumque cupiditate facilis
+        praesentium quam maiores porro iure perferendis nesciunt, odit facere neque, nulla ut itaque necessitatibus
+        saepe. Voluptatibus!</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores ea minima repudiandae iusto cumque provident
+        labore fugit laborum, culpa voluptatum optio, excepturi, sit ratione saepe nostrum doloremque commodi. Earum,
+        quod.</p>
+</body>
+
+</html>

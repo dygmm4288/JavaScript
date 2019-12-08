@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- media 속성 -->
+    <link rel="stylesheet" href="./css/screen.css" media="screen">
+    <link rel="stylesheet" href="./css/print.css" media="print">
+    <link rel="stylesheet" href="./css/phone.css" media="screen and (max-width: 767px)">
+    <title>반응형 웹</title>
+    <style>
+        /* @media 규칙 */
+        /* only: '해당 장치에서만...'(defalut) not: '해당 장치를 제외한...'  */
+        @media screen {
+            h1 {
+                color: white;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 959px) {
+            body {
+                background-color: lavenderblush;
+            }
+
+            h1 {
+                color: black;
+            }
+        }
+
+        @media screen and (min-device-width: 360px) {
+            body {
+                background-color: purple;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque pariatur in eos accusamus ratione dolore
+        perferendis temporibus facere animi eum, deleniti at veniam? Libero eos vel nisi accusantium aperiam distinctio?
+    </h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellat ipsum distinctio, reprehenderit
+        perspiciatis hic non velit saepe. Quisquam omnis aspernatur eligendi commodi illum, quod iusto animi repellendus
+        dignissimos recusandae.</p>
+</body>
+
+</html>
