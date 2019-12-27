@@ -1,0 +1,47 @@
+html,
+body,
+.full-screen {
+	height: 100%;
+}
+body {
+	margin: 0;
+}
+.full-screen {
+	display: flex;
+	flex-direction: column;
+	background: #555;
+	color: white;
+
+	overflow: hidden;
+}
+.full-screen .header {
+	flex: 0 0 auto;
+	height: 50px;
+	overflow: auto;
+}
+.full-screen .main {
+	flex: 1 1 auto;
+	overflow: hidden;
+	display: flex;
+}
+.left {
+	flex: 0 0 auto;
+	overflow: auto;
+	width: 200px;
+	background: #eee;
+}
+.middle {
+	overflow: auto;
+	flex: 1 1 auto;
+}
+.right {
+	flex: 0 0 auto;
+	overflow: scroll;
+	width: 200px;
+	background: #eee;
+}
+.full-screen .footer {
+	flex: 0 0 auto;
+	overflow: scroll;
+	height: 50px;
+}
