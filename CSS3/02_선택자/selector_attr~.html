@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>selector</title>
+		<style>
+			/* 속성 선택자 */
+			[target] {
+				text-decoration: none;
+			}
+			[target="_blank"] {
+				background-color: red;
+				color: white;
+			}
+			[target="_self"] {
+				background-color: blue;
+				color: white;
+			}
+			[class^="link"] {
+				list-style: none;
+			}
+			/* 가상 선택자 */
+			:link {
+				color: black;
+				outline: none; /* 링크가 어디 걸리는 지 모름  */
+			}
+			a:hover {
+				color: white;
+				text-decoration: underline;
+			}
+			h1:hover {
+				text-decoration: underline;
+			}
+			a:active {
+				background-color: white;
+				color: black;
+			}
+			a:visited {
+				color: silver;
+			}
+			a:focus {
+				background-color: blue;
+				color: #fff;
+			}
+			input:focus {
+				background-color: red;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">css기본문법</h1>
+		<h2>속성 선택자</h2>
+		<ul>
+			<li class="link1"><a href="#" target="_self">google</a></li>
+			<li class="link2"><a href="#" target="_self">daum</a></li>
+			<li class="link3"><a href="#" target="_blank">naver</a></li>
+		</ul>
+		<h2>가상 선택자</h2>
+		<input type="text" placeholder="이름 입력" />
+	</body>
+</html>
