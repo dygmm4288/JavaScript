@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style>
+			/* list의 스타일 없애고, 각각 왼쪽으로 */
+			ul {
+				list-style: none;
+			}
+			ul li {
+				float: left;
+			}
+			ul li a {
+				width: 108px;
+				height: 28px;
+				display: block;
+				text-indent: -99999em;
+				background: url("tab_sprites.gif");
+			}
+			ul li:nth-child(2) a {
+				background-position: -107px top;
+			}
+			ul li:nth-child(3) a {
+				background-position: -214px top;
+			}
+			ul li:nth-child(1) a:hover {
+				background-position: 0px -32px;
+			}
+			ul li:nth-child(2) a:hover {
+				background-position: -107px -32px;
+			}
+			ul li:nth-child(3) a:hover {
+				background-position: -214px -32px;
+			}
+			body {
+				width: 600px;
+				background: url("bg.png") no-repeat fixed center center;
+				font-size: 45px;
+				text-align: justify;
+				line-height: 1.6;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#">스타</a></li>
+			<li><a href="#">프로그램</a></li>
+			<li><a href="#">이슈</a></li>
+		</ul>
+		<div class="bg">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Corrupti enim vitae facere alias voluptatem. Sunt eaque ducimus
+				deleniti blanditiis laudantium, provident minima officia rerum
+				saepe, nulla quis consequuntur, autem quam?Lorem ipsum dolor sit
+				amet consectetur adipisicing elit. Porro ducimus mollitia libero
+				magni! Inventore, blanditiis. Magni, omnis maxime! Commodi
+				dolore modi fuga, earum at cumque facilis possimus perferendis
+				officia! Lorem ipsum dolor sit amet consectetur adipisicing
+				elit. Autem facere impedit ratione sapiente dicta neque quas
+				eveniet placeat labore dolor nesciunt adipisci facilis eos
+				delectus unde ipsum consequuntur, quod sunt. Lorem ipsum dolor
+				sit amet consectetur adipisicing elit. Excepturi natus sunt qui,
+				veniam mollitia architecto corrupti tempore illo quae. Vero
+				incidunt rem natus, error sint perspiciatis veniam inventore
+				dolor tenetur.
+			</p>
+		</div>
+	</body>
+</html>

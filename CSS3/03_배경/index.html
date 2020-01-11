@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Background</title>
+		<style>
+			.bg {
+				width: 300px;
+				height: 300px;
+				background-image: url("./bg.png");
+				background-repeat: no-repeat;
+				background-position: left top;
+				border: 1px solid red;
+				margin: 10px;
+			}
+			.html5news {
+				width: 400px;
+				height: 300px;
+				border: 2px solid green;
+				padding: 10px;
+				background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/485050/layout2.jpg)
+					no-repeat right bottom;
+				/*  === same
+                background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/485050/layout2.jpg)
+                no-repeat 100% 100%;
+                */
+			}
+			.html5news2 {
+				width: 400px;
+				height: 300px;
+				border: 2px solid red;
+				padding: 10px;
+				background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/485050/layout2.jpg)
+					no-repeat 50px 50px;
+			}
+			h1,
+			p {
+				float: left;
+			}
+			p {
+				width: 400px;
+				margin-left: 20px;
+			}
+			.logo a {
+				width: 225px;
+				height: 225px;
+				background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/485050/layout2.jpg)
+					no-repeat;
+				display: block;
+				text-indent: -999999em;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg"></div>
+		<div class="html5news"></div>
+		<div class="html5news2"></div>
+		<div>
+			<h1 class="logo"><a href="#">html 웹 표준</a></h1>
+		</div>
+	</body>
+</html>
