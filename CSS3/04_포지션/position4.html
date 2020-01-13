@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<style>
+			.html5news-slide {
+				width: 800px;
+				height: 300px;
+				padding: 10px;
+				border: 2px solid green;
+				margin: 0 auto;
+
+				position: relative;
+			}
+			.html5news-slide img {
+				float: left;
+			}
+			.controls a {
+				display: block;
+				white-space: nowrap;
+				background: #333;
+				text-align: center;
+				line-height: 50px;
+				color: #fff;
+				position: absolute;
+				top: calc(50% - 25px);
+			}
+			.controls .prev {
+				right: calc(100%);
+			}
+			.controls .next {
+				left: calc(100%);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 이전 다음버튼을 좌우로 배치하세요.
+-->
+		<div class="html5news-slide">
+			<img
+				src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/485050/restaurant_title.jpg"
+				alt="slide1"
+			/>
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting
+				industry. Lorem Ipsum has been the industry's standard dummy
+				text ever since the 1500s
+			</p>
+			<div class="controls">
+				<a href="#" class="prev">previous project</a>
+				<a href="#" class="next">Next project</a>
+			</div>
+		</div>
+	</body>
+</html>

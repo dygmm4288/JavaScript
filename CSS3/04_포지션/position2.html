@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>position</title>
+		<style type="text/css">
+			* {
+				margin: 0 auto;
+				padding: 0;
+			}
+
+			img {
+				vertical-align: top;
+			}
+			.modal {
+				position: absolute;
+				left: calc(50% - 250px);
+				top: calc(50% - 100px);
+			}
+			/* absolute 부모(기준)의 자격
+static이 아닌 요소 가까운 부모중에서 relative absolute fixed
+fixed는 무조건 화면을 기준으로 위치. (브라우저 화면..) */
+			.container {
+				width: 500px;
+				height: 300px;
+				background: yellow;
+				position: relative;
+			}
+			.box {
+				height: 100px;
+				position: absolute;
+				margin-top: -50px;
+			}
+			.a {
+				background: red;
+				top: 50%;
+				right: 100%;
+			}
+			.b {
+				background: blue;
+				left: 50%;
+				top: 50%;
+				margin-left: -50px;
+			}
+			.c {
+				background: green;
+				left: 100%;
+				top: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="modal">
+			<div class="container">
+				<div class="box a">box aaa</div>
+				<div class="box b">boxxx</div>
+				<div class="box c">bo</div>
+			</div>
+		</div>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+			aliquip ex ea commodo consequat. Duis aute irure dolor in
+			reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+			pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+			culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</body>
+</html>

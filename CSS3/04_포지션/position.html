@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>position</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			img {
+				vertical-align: top;
+			}
+
+			.box {
+				border: 1px solid;
+				padding: 10px;
+				/* absolute 특징
+                 적용된 요소는 다른 태그들이 알아보지 못한다 => 붕뜬다.
+                 부모의 기준으로 정렬을 하는데 부모의 기준이 없을 시 body를 기본 부모로 잡는다.
+                 */
+				/* relative 특징 
+                 자기 자신(원래 있던 자리)을 기준으로 잡는다. 포지션을 주기 직전 그 자리
+                 적용된 요소는 다른 태그들이 알아볼 수 있다. 
+                 실체가 움직이는 것이 아님*/
+				position: relative;
+			}
+			.a {
+				background: blue;
+				left: 50px;
+				top: 50px;
+			}
+			.b {
+				background: red;
+				left: 50px;
+				top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box a">
+			<img src="http://placehold.it/100X120" alt="" />
+		</div>
+		<div class="box b">
+			<img src="http://placehold.it/100X120" alt="" />
+		</div>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+			eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+			aliquip ex ea commodo consequat. Duis aute irure dolor in
+			reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+			pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+			culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</body>
+</html>
