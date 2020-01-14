@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transition</title>
+    <style>
+        .photo img {
+            width: 100px;
+            opacity: 0;
+            /* transition-property: width;
+            transition-duration: 2s;
+            transition-delay: 1s; 
+            transition-timing-function:ease-in-out;
+             */
+            transition: all .5s  ease-in;
+        }
+        .photo:hover img {
+            width: 400px;
+            margin-left: 100px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="photo"><img 
+        src ="http://placehold.it/100x100"></img></div>
+</body>
+</html>
