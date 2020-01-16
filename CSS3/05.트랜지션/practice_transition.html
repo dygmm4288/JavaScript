@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Practice Transition</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				color: white;
+			}
+			a {
+				text-decoration: none;
+			}
+			ul {
+				list-style: none;
+			}
+			.sub_menu_container {
+				background: #333;
+			}
+			.sub_menu_container > ul {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				line-height: 45px;
+			}
+		</style>
+		<script>
+			window.onload = () => {
+				const aTags = document.querySelectorAll("a");
+				aTags.forEach(aTag => {
+					aTag.onclick = e => {
+						console.log(e.currentTarget.innerText);
+					};
+				});
+			};
+		</script>
+	</head>
+	<body>
+		<nav class="sub_menu_container">
+			<ul class="sub_menu">
+				<li>INDEX</li>
+				<li>LOCATION</li>
+				<li>DOCUMENTS</li>
+				<li>ABOUT ME</li>
+			</ul>
+			<ul>
+					<li>Typescript</li>
+					<li>React</li>
+					<li>JavaScript</li>
+					<li>HTML</li>
+					<li>CSS</li>
+				</ul>
+				<ul>
+					<li>Daejeon</li>
+					<li>Seoul</li>
+					<li>Busan</li>
+				</ul>
+			</div>
+		</nav>
+	</body>
+</html>
